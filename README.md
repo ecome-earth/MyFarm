@@ -1,57 +1,56 @@
-# MyFarm 
-MyFarm is an open-source project, made to leverage the power of IT in the world of agriculture. IT is made to provide the farmer with helpful apps that boosts productivity and level up his farming experience. 
+# MyFarm
 
-The App is split into different Sections:
+MyFarm is an innovative open-source project designed to integrate Information Technology into the realm of agriculture, enhancing the farming experience and boosting productivity. The application is thoughtfully divided into various sections to cater to different aspects of farming.
 
-# MyInventory
-a place where the farmer can keep track of his inventory records and modify it according to his activities . see the estimated value and gather insights.
+## MyInventory
 
-# Cashflow
-a place where the farmer can keep track of his expenses and income, see further financial insights that gets linked to the expert and investor dashboard. 
+MyInventory serves as a centralized hub where farmers can meticulously manage their inventory records. It offers a seamless interface to modify records based on farming activities, provides insights into the estimated value of inventory, and facilitates efficient record-keeping.
 
-# MyPlan
-a place where the farmer can keep track of his project milestones made by the expert. 
-Provides a mechanisme for the expert to create a Project Plan with Milestones and tasks. 
-and provides the farmer with an interface to see his tasks and a way to validate them. 
+## Cashflow
 
-# Plot
-a farm overview with different regions highlighted on a map. that showcase the farm assets in a geographical manner.
+The Cashflow section empowers farmers to keep a detailed record of their expenses and income. Beyond simple tracking, this feature provides valuable financial insights that are seamlessly linked to expert and investor dashboards.
 
-# Entities
-Database is represented by a Document-based schema. MongoDB will be used, the definition of the data types will be as following:
+## MyPlan
 
+MyPlan acts as a dynamic project management tool, allowing farmers to track project milestones set by experts. The system facilitates experts in creating detailed project plans with milestones and tasks, while farmers can interact with the interface to view and validate their assigned tasks.
 
-# User
-id UUID
-firstName String
-lastName String
-dob Timestamp
-email String
-phoneNumber String
-address String
-role Role
-metadata String
+## Plot
 
-# enum Role {FARMER, EXPERT, INVESTOR, ADMIN}
+The Plot section offers farmers a comprehensive overview of their farm in a geographical context. Through an interactive map, different regions are highlighted to showcase farm assets, aiding in efficient farm management.
 
+## Entities
 
-# Inventory
+The database is represented by a document-based schema, utilizing MongoDB. The data types and definitions are as follows:
 
-each user can be linked to an inventory
-it contains all items. By Default the database should provide most of the items used by a farmer, with possiblity to create a custom item.
+### User
 
-id UUID
-metadata String
-items Item[]
+- **id**: UUID
+- **firstName**: String
+- **lastName**: String
+- **dob**: Timestamp
+- **email**: String
+- **phoneNumber**: String
+- **address**: String
+- **role**: Role
+- **metadata**: String
 
+   #### Enum Role {FARMER, EXPERT, INVESTOR, ADMIN}
 
+### Inventory
 
+Each user can be linked to an inventory containing all items. The database comes pre-loaded with default farming items, but users have the flexibility to create custom items.
 
-# Item
-id UUID
-name String
-description String
-price Double 
-imageUrl String
-metadata String
+- **id**: UUID
+- **metadata**: String
+- **items**: Item[]
 
+### Item
+
+- **id**: UUID
+- **name**: String
+- **description**: String
+- **price**: Double
+- **imageUrl**: String
+- **metadata**: String
+
+This structured approach to MyFarm ensures a user-friendly, efficient, and adaptable platform for farmers, experts, and investors alike. The integration of MongoDB and the outlined data model guarantees a robust foundation for seamless data management within the agricultural domain.
