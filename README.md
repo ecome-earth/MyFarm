@@ -2,7 +2,7 @@
 
 MyFarm is an innovative open-source project designed to integrate Information Technology into the realm of agriculture, enhancing the farming experience and boosting productivity. The application is thoughtfully divided into various sections to cater to different aspects of farming.
 
-## MyInventory
+## Inventory
 
 MyInventory serves as a centralized hub where farmers can meticulously manage their inventory records. It offers a seamless interface to modify records based on farming activities, provides insights into the estimated value of inventory, and facilitates efficient record-keeping.
 
@@ -10,7 +10,7 @@ MyInventory serves as a centralized hub where farmers can meticulously manage th
 
 The Cashflow section empowers farmers to keep a detailed record of their expenses and income. Beyond simple tracking, this feature provides valuable financial insights that are seamlessly linked to expert and investor dashboards.
 
-## MyPlan
+## Plan
 
 MyPlan acts as a dynamic project management tool, allowing farmers to track project milestones set by experts. The system facilitates experts in creating detailed project plans with milestones and tasks, while farmers can interact with the interface to view and validate their assigned tasks.
 
