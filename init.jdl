@@ -1,0 +1,151 @@
+
+application {
+  config {
+    baseName myFarm
+    applicationType gateway
+    packageName com.myfarm
+    authenticationType oauth2
+    prodDatabaseType mongodb
+    devDatabaseType mongodb
+    databaseType mongodb
+    searchEngine elasticsearch
+    clientFramework react
+    cacheProvider ehcache
+  }
+  entities *
+}
+
+application {
+  config {
+    baseName myInventory
+    applicationType microservice
+    packageName com.myfarm
+    authenticationType oauth2
+    prodDatabaseType mongodb
+    devDatabaseType mongodb
+    databaseType mongodb
+    enableTranslation	true
+    languages [en, fr,ar]
+    serviceDiscoveryType consul
+    searchEngine elasticsearch
+    cacheProvider hazelcast
+    messageBroker kafka
+  }
+  entities Inventory, Item
+}
+
+application {
+  config {
+    baseName myCashflow
+    applicationType microservice
+    packageName com.myfarm
+    authenticationType oauth2
+    prodDatabaseType mongodb
+    devDatabaseType mongodb
+    databaseType mongodb
+    searchEngine elasticsearch
+     enableTranslation	true
+    languages [en, fr,ar]
+    serviceDiscoveryType consul
+    cacheProvider hazelcast
+    messageBroker kafka
+  }
+  entities Cashflow, Transaction
+}
+
+application {
+	config {
+    baseName myToDo
+    applicationType microservice
+    packageName com.myfarm
+    authenticationType oauth2
+    prodDatabaseType mongodb
+    devDatabaseType mongodb
+    databaseType mongodb
+    searchEngine elasticsearch
+    enableTranslation	true
+    languages [en, fr,ar]
+    serviceDiscoveryType consul
+    cacheProvider hazelcast
+    messageBroker kafka
+    }
+    entities ToDo, Plan, Milestone  
+}
+
+entity User {
+id UUID
+firstName String
+lastName String
+email String
+phoneNumber String
+address String
+role Role
+metadata String
+}
+
+enum Role {
+FARMER, EXPERT, INVESTOR, ADMIN
+}
+
+entity Inventory {
+id UUID 
+description String
+}
+
+
+@embedded
+entity Item {
+id UUID
+name String
+description String
+price String
+metadata String
+}
+
+entity Cashflow {
+id UUID
+description String
+}
+
+@embedded
+entity Transaction {
+id UUID
+description String
+amount Double
+metadata String
+}
+
+entity Plan {
+id UUID
+description String
+}
+
+@embedded
+entity ToDo {
+id UUID
+name String
+description String
+duration Duration
+startTime Instant
+isDone Boolean
+metadata String
+}
+
+@embedded
+entity Milestone {
+id UUID
+name String
+description String
+}
+
+relationship OneToMany {
+  Inventory{items} to Item{inventory}
+  Cashflow{transactions} to Transaction{cashflow}
+  Plan{milestones} to Milestone{plan}
+  Milestone{tasks} to ToDo{milestone}
+}
+
+
+
+
+

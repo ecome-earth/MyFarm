@@ -1,0 +1,12 @@
+{
+  "generator-jhipster": {
+    "baseName": "backendMyFarm",
+    "creationTimestamp": 1710982397924,
+    "devServerPort": 4200,
+    "entities": [],
+    "jhipsterVersion": "8.1.0",
+    "jwtSecretKey": "MjdkMDU4NzdiMGJmNjAwZDQ3OTdkZTk5MmVkYmJjODZiMGEzN2M2OWY3Y2Q2M2RlZGFlOTQ3NGExN2RmM2U2MGVkMTY1YzM0ZTIwNGZlNjE1N2Y1NWVjYmU2M2UzNjJlNTU0Y2Q5MGFhNTg0YjA1NjE1MDNlODEwZWU2MDA3Zjk=",
+    "languages": ["en"],
+    "nativeLanguage": "en"
+  }
+}
