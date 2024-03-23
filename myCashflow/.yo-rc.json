@@ -1,12 +1,28 @@
 {
   "generator-jhipster": {
-    "baseName": "backendMyFarm",
+    "applicationIndex": 2,
+    "applicationType": "microservice",
+    "authenticationType": "oauth2",
+    "baseName": "myCashflow",
+    "cacheProvider": "hazelcast",
     "creationTimestamp": 1710982397924,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
     "devServerPort": 4200,
-    "entities": [],
+    "enableTranslation": true,
+    "entities": ["Cashflow", "Transaction"],
     "jhipsterVersion": "8.1.0",
     "jwtSecretKey": "MjdkMDU4NzdiMGJmNjAwZDQ3OTdkZTk5MmVkYmJjODZiMGEzN2M2OWY3Y2Q2M2RlZGFlOTQ3NGExN2RmM2U2MGVkMTY1YzM0ZTIwNGZlNjE1N2Y1NWVjYmU2M2UzNjJlNTU0Y2Q5MGFhNTg0YjA1NjE1MDNlODEwZWU2MDA3Zjk=",
-    "languages": ["en"],
-    "nativeLanguage": "en"
+    "languages": ["en", "fr", "ar"],
+    "lastLiquibaseTimestamp": 1710982517000,
+    "messageBroker": "kafka",
+    "monorepository": true,
+    "nativeLanguage": "en",
+    "packageFolder": "com/myfarm",
+    "packageName": "com.myfarm",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": "elasticsearch",
+    "serviceDiscoveryType": "consul",
+    "skipCommitHook": true
   }
 }

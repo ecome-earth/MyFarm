@@ -1,0 +1,27 @@
+{
+  "annotations": {
+    "changelogDate": "20240323002731"
+  },
+  "applications": ["myFarm", "myInventory"],
+  "entityTableName": "inventory",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Inventory",
+  "relationships": [
+    {
+      "otherEntityName": "item",
+      "otherEntityRelationshipName": "inventory",
+      "relationshipName": "items",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ]
+}

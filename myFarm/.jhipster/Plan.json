@@ -1,0 +1,27 @@
+{
+  "annotations": {
+    "changelogDate": "20240323003131"
+  },
+  "applications": ["myFarm", "myToDo"],
+  "entityTableName": "plan",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Plan",
+  "relationships": [
+    {
+      "otherEntityName": "milestone",
+      "otherEntityRelationshipName": "plan",
+      "relationshipName": "milestones",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ]
+}

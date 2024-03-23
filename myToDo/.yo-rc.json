@@ -1,12 +1,28 @@
 {
   "generator-jhipster": {
-    "baseName": "backendMyFarm",
+    "applicationIndex": 3,
+    "applicationType": "microservice",
+    "authenticationType": "oauth2",
+    "baseName": "myToDo",
+    "cacheProvider": "hazelcast",
     "creationTimestamp": 1710982398746,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
     "devServerPort": 4200,
-    "entities": [],
+    "enableTranslation": true,
+    "entities": ["ToDo", "Plan", "Milestone"],
     "jhipsterVersion": "8.1.0",
     "jwtSecretKey": "ODNmOTE1NjAyNWE5MzE2MmVhMjg4MmQyN2QzNzEyNmU3YmE2YTg5OTYyMzk0NTE5NWQ3MTk0YzY3ZWYzZDZiNGE2NTU4MDU4NDdhY2I4ODQ5NmIxZWE4Y2FhYTEwNDAwMzE5OWYzZjI0YTE0OWE5NDFiZDVhYTI1ZjEzOTcyZTU=",
-    "languages": ["en"],
-    "nativeLanguage": "en"
+    "languages": ["en", "fr", "ar"],
+    "lastLiquibaseTimestamp": 1710982578000,
+    "messageBroker": "kafka",
+    "monorepository": true,
+    "nativeLanguage": "en",
+    "packageFolder": "com/myfarm",
+    "packageName": "com.myfarm",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": "elasticsearch",
+    "serviceDiscoveryType": "consul",
+    "skipCommitHook": true
   }
 }

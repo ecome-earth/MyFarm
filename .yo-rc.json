@@ -1,0 +1,9 @@
+{
+  "generator-jhipster": {
+    "appsFolders": ["myFarm", "myInventory", "myCashflow", "myToDo"],
+    "baseName": "workspaces",
+    "clientPackageManager": "npm",
+    "directoryPath": "./",
+    "jhipsterVersion": "8.1.0"
+  }
+}

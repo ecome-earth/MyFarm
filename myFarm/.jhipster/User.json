@@ -1,0 +1,44 @@
+{
+  "annotations": {
+    "changelogDate": "20240323002631"
+  },
+  "applications": ["myFarm"],
+  "entityTableName": "user",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "role",
+      "fieldType": "Role",
+      "fieldValues": "FARMER,EXPERT,INVESTOR,ADMIN"
+    },
+    {
+      "fieldName": "metadata",
+      "fieldType": "String"
+    }
+  ],
+  "name": "User",
+  "relationships": []
+}

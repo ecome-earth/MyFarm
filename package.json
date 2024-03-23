@@ -1,0 +1,40 @@
+{
+  "workspaces": {
+    "packages": [
+      "myFarm",
+      "myInventory",
+      "myCashflow",
+      "myToDo"
+    ]
+  },
+  "scripts": {
+    "backend:build-cache": "concurrently npm:backend:build-cache:myFarm npm:backend:build-cache:myInventory npm:backend:build-cache:myCashflow npm:backend:build-cache:myToDo",
+    "backend:build-cache:myCashflow": "npm run backend:build-cache --workspace myCashflow --if-present",
+    "backend:build-cache:myFarm": "npm run backend:build-cache --workspace myFarm --if-present",
+    "backend:build-cache:myInventory": "npm run backend:build-cache --workspace myInventory --if-present",
+    "backend:build-cache:myToDo": "npm run backend:build-cache --workspace myToDo --if-present",
+    "ci:backend:test": "npm run ci:backend:test --workspaces --if-present",
+    "ci:e2e:package": "npm run ci:docker:build --workspaces --if-present && npm run java:docker --workspaces --if-present",
+    "ci:e2e:run": "npm run e2e:headless --workspaces --if-present",
+    "ci:frontend:test": "npm run ci:frontend:test --workspaces --if-present",
+    "java:docker": "concurrently npm:java:docker:myFarm npm:java:docker:myInventory npm:java:docker:myCashflow npm:java:docker:myToDo",
+    "java:docker:arm64": "concurrently npm:java:docker:arm64:myFarm npm:java:docker:arm64:myInventory npm:java:docker:arm64:myCashflow npm:java:docker:arm64:myToDo",
+    "java:docker:arm64:myCashflow": "npm run java:docker:arm64 --workspace myCashflow --if-present",
+    "java:docker:arm64:myFarm": "npm run java:docker:arm64 --workspace myFarm --if-present",
+    "java:docker:arm64:myInventory": "npm run java:docker:arm64 --workspace myInventory --if-present",
+    "java:docker:arm64:myToDo": "npm run java:docker:arm64 --workspace myToDo --if-present",
+    "java:docker:myCashflow": "npm run java:docker --workspace myCashflow --if-present",
+    "java:docker:myFarm": "npm run java:docker --workspace myFarm --if-present",
+    "java:docker:myInventory": "npm run java:docker --workspace myInventory --if-present",
+    "java:docker:myToDo": "npm run java:docker --workspace myToDo --if-present",
+    "watch": "concurrently npm:watch:myFarm npm:watch:myInventory npm:watch:myCashflow npm:watch:myToDo",
+    "watch:myCashflow": "npm run watch --workspace myCashflow --if-present",
+    "watch:myFarm": "npm run watch --workspace myFarm --if-present",
+    "watch:myInventory": "npm run watch --workspace myInventory --if-present",
+    "watch:myToDo": "npm run watch --workspace myToDo --if-present",
+    "webapp:test": "npm run webapp:test --workspaces --if-present"
+  },
+  "devDependencies": {
+    "concurrently": "8.2.2"
+  }
+}

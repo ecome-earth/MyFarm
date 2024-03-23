@@ -1,0 +1,26 @@
+{
+  "generator-jhipster": {
+    "applicationIndex": 0,
+    "applicationType": "gateway",
+    "authenticationType": "oauth2",
+    "baseName": "myFarm",
+    "cacheProvider": "ehcache",
+    "clientFramework": "react",
+    "creationTimestamp": 1711153531909,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "devServerPort": 4200,
+    "entities": ["User", "Inventory", "Item", "Cashflow", "Transaction", "Plan", "ToDo", "Milestone"],
+    "jhipsterVersion": "8.1.0",
+    "jwtSecretKey": "OTk0YTBmZjYyNDU3YWVjY2ZmMzMxYmM5MzkwZTlmZWM4NmI1NWU4MGUzYjIyMWY1NDRlNDFjMGY1YmYxZGNhMjZlNDY3NDFkZjdjNjBkN2Q4MmJmNzBmZTYzZTg5OTU5MTVlNDc3NjllZGQ0MGZhMWRmZWQyNjE1ZGE5MGU4NDU=",
+    "languages": ["en"],
+    "lastLiquibaseTimestamp": 1711154011000,
+    "monorepository": true,
+    "nativeLanguage": "en",
+    "packageFolder": "com/myfarm",
+    "packageName": "com.myfarm",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": "elasticsearch",
+    "skipCommitHook": true
+  }
+}

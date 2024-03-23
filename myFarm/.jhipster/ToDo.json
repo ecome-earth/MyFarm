@@ -1,0 +1,48 @@
+{
+  "annotations": {
+    "changelogDate": "20240323003231",
+    "embedded": true
+  },
+  "applications": ["myFarm", "myToDo"],
+  "entityTableName": "to_do",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "duration",
+      "fieldType": "Duration"
+    },
+    {
+      "fieldName": "startTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isDone",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "metadata",
+      "fieldType": "String"
+    }
+  ],
+  "name": "ToDo",
+  "relationships": [
+    {
+      "otherEntityName": "milestone",
+      "otherEntityRelationshipName": "tasks",
+      "relationshipName": "milestone",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ]
+}

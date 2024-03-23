@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "changelogDate": "20240321005517",
+    "embedded": true
+  },
+  "applications": ["myFarm", "myCashflow"],
+  "entityTableName": "transaction",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "metadata",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Transaction",
+  "relationships": [
+    {
+      "otherEntityName": "cashflow",
+      "otherEntityRelationshipName": "transactions",
+      "relationshipName": "cashflow",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ]
+}

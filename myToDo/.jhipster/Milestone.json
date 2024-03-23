@@ -1,0 +1,39 @@
+{
+  "annotations": {
+    "changelogDate": "20240321005618",
+    "embedded": true
+  },
+  "applications": ["myFarm", "myToDo"],
+  "entityTableName": "milestone",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Milestone",
+  "relationships": [
+    {
+      "otherEntityName": "toDo",
+      "otherEntityRelationshipName": "milestone",
+      "relationshipName": "tasks",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "plan",
+      "otherEntityRelationshipName": "milestones",
+      "relationshipName": "plan",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ]
+}

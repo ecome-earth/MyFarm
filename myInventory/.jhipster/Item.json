@@ -1,0 +1,40 @@
+{
+  "annotations": {
+    "changelogDate": "20240321005517",
+    "embedded": true
+  },
+  "applications": ["myFarm", "myInventory"],
+  "entityTableName": "item",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "metadata",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Item",
+  "relationships": [
+    {
+      "otherEntityName": "inventory",
+      "otherEntityRelationshipName": "items",
+      "relationshipName": "inventory",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ]
+}
