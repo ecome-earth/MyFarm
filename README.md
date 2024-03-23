@@ -18,39 +18,83 @@ MyPlan acts as a dynamic project management tool, allowing farmers to track proj
 
 The Plot section offers farmers a comprehensive overview of their farm in a geographical context. Through an interactive map, different regions are highlighted to showcase farm assets, aiding in efficient farm management.
 
+
+# How to contribute
+
+- check available issues in the project section
+- request working on issue by commenting on it
+- Create a branch with issue name and work on it
+- after making sure all acceptance criteria pass, create a Pull request for the relevant branch
+
+
 ## Entities
 
 The database is represented by a document-based schema, utilizing MongoDB. The data types and definitions are as follows:
 
-### User
 
-- **id**: UUID
-- **firstName**: String
-- **lastName**: String
-- **dob**: Timestamp
-- **email**: String
-- **phoneNumber**: String
-- **address**: String
-- **role**: Role
-- **metadata**: String
+entity User {
+id UUID
+firstName String
+lastName String
+email String
+phoneNumber String
+address String
+role Role
+metadata String
+}
 
-   #### Enum Role {FARMER, EXPERT, INVESTOR, ADMIN}
+enum Role {
+FARMER, EXPERT, INVESTOR, ADMIN
+}
 
-### Inventory
+entity Inventory {
+id UUID 
+description String
+}
 
-Each user can be linked to an inventory containing all items. The database comes pre-loaded with default farming items, but users have the flexibility to create custom items.
 
-- **id**: UUID
-- **metadata**: String
-- **items**: Item[]
+@embedded
+entity Item {
+id UUID
+name String
+description String
+price String
+metadata String
+}
 
-### Item
+entity Cashflow {
+id UUID
+description String
+}
 
-- **id**: UUID
-- **name**: String
-- **description**: String
-- **price**: Double
-- **imageUrl**: String
-- **metadata**: String
+@embedded
+entity Transaction {
+id UUID
+description String
+amount Double
+metadata String
+}
 
+entity Plan {
+id UUID
+description String
+}
+
+@embedded
+entity ToDo {
+id UUID
+name String
+description String
+duration Duration
+startTime Instant
+isDone Boolean
+metadata String
+}
+
+@embedded
+entity Milestone {
+id UUID
+name String
+description String
+}
 This structured approach to MyFarm ensures a user-friendly, efficient, and adaptable platform for farmers, experts, and investors alike. The integration of MongoDB and the outlined data model guarantees a robust foundation for seamless data management within the agricultural domain.
